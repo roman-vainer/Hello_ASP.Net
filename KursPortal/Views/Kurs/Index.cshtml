@@ -1,0 +1,24 @@
+﻿@model List<KursPortal.Models.Kurs>
+
+<div class="row">
+	@foreach (Kurs k in Model)
+	{
+		<div class="col-sm-4 mb-3 mb-sm-0">
+			<div class="card text-center">
+				<div class="card-header">Dozenr: @k.Dozent</div>
+				<div class="card-body">
+					<h5 class="card-title">@k.Kursname</h5>
+					<p class="card-text">@k.DauerInTagen Tage</p>
+					<a asp-controller="Kurs" asp-action="Detail" asp-route-id="@k.Id" class="btn btn-primary">Zur Detailansicht</a>
+				</div>
+				<div class="card-footer text-body-secondary">Teilnehmeranzahl:@k.AnzahlTeilnehmer</div>
+			</div>
+		</div>
+	}
+	<a class="btn btn-success" asp-controller="Home" asp-action="Index"> Zum Homepage</a>
+</div>
+
+
+
+
+	
