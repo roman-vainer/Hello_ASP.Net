@@ -7,6 +7,6 @@
         public string Dozent { get; set; }
         public int AnzahlTeilnehmer { get; set; }
         public int DauerInTagen { get; set; }
-        public string inhalt { get; set; }
+        public string Inhalt { get; set; }
     }
 }

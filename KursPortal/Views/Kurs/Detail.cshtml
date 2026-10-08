@@ -4,6 +4,17 @@
 <p><strong>Dozent:</strong> @Model.Dozent</p>
 <p><strong>Teilnehmer:</strong> @Model.AnzahlTeilnehmer</p>
 <p><strong>Dauer:</strong> @Model.DauerInTagen Tage</p>
-<br/>
-<h4><strong>Inhalt:</strong> @Model.inhalt</h4>
-<p>@Model.inhalt</p>
+<br />
+<h4><strong>Inhalt:</strong> @Model.Inhalt</h4>
+<p>@Model.Inhalt</p>
+
+<a asp-controller="Kurs" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Bearbeiten</a>
+<a asp-controller="Kurs" asp-action="Index" class="btn btn-secondary">Zurück zur Übersicht</a>
+
+<form asp-controller="Kurs"
+	  asp-action="Delete"
+	  asp-route-id=@Model.Id
+	  method="post"
+	  onsubmit="return confirm('Möchtest du diesen Kurs wirklich löschen?')">
+	<button type="submit" class="btn btn-danger">Löschen</button>
+</form>

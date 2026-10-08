@@ -1,11 +1,13 @@
 ﻿@model List<KursPortal.Models.Kurs>
 
+<a asp-controller="Kurs" asp-action="Create" class="btn btn-info mb-3">Neuen Kurs erstellen</a>
+
 <div class="row">
 	@foreach (Kurs k in Model)
 	{
 		<div class="col-sm-4 mb-3 mb-sm-0">
 			<div class="card text-center">
-				<div class="card-header">Dozenr: @k.Dozent</div>
+				<div class="card-header">Dozent: @k.Dozent</div>
 				<div class="card-body">
 					<h5 class="card-title">@k.Kursname</h5>
 					<p class="card-text">@k.DauerInTagen Tage</p>
@@ -15,7 +17,6 @@
 			</div>
 		</div>
 	}
-	<a class="btn btn-success" asp-controller="Home" asp-action="Index"> Zum Homepage</a>
 </div>
 
 
